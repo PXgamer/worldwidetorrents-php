@@ -3,8 +3,7 @@
 namespace pxgamer\WorldWideTorrents;
 
 /**
- * Class Group
- * @package pxgamer\WorldWideTorrents
+ * Class Group.
  */
 class Group
 {
@@ -12,6 +11,7 @@ class Group
 
     /**
      * Group constructor.
+     *
      * @param Client|null $client
      */
     public function __construct(Client $client = null)
@@ -30,6 +30,7 @@ class Group
 
     /**
      * @param null $groupId
+     *
      * @return array|bool|mixed
      */
     public function getInfo($groupId = null)
@@ -43,6 +44,7 @@ class Group
 
     /**
      * @param null $groupId
+     *
      * @return array|bool|mixed
      */
     public function getTorrents($groupId = null)

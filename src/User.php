@@ -3,8 +3,7 @@
 namespace pxgamer\WorldWideTorrents;
 
 /**
- * Class User
- * @package pxgamer\WorldWideTorrents
+ * Class User.
  */
 class User
 {
@@ -12,6 +11,7 @@ class User
 
     /**
      * User constructor.
+     *
      * @param Client|null $client
      */
     public function __construct(Client $client = null)
@@ -30,6 +30,7 @@ class User
 
     /**
      * @param null $userId
+     *
      * @return array|bool|mixed
      */
     public function getInfo($userId = null)
@@ -43,6 +44,7 @@ class User
 
     /**
      * @param null $userId
+     *
      * @return array|bool|mixed
      */
     public function getTorrents($userId = null)

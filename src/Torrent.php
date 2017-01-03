@@ -3,8 +3,7 @@
 namespace pxgamer\WorldWideTorrents;
 
 /**
- * Class Torrent
- * @package pxgamer\WorldWideTorrents
+ * Class Torrent.
  */
 class Torrent
 {
@@ -12,6 +11,7 @@ class Torrent
 
     /**
      * Torrent constructor.
+     *
      * @param Client|null $client
      */
     public function __construct(Client $client = null)
@@ -30,6 +30,7 @@ class Torrent
 
     /**
      * @param null $torrentId
+     *
      * @return array|bool|mixed
      */
     public function getInfo($torrentId = null)

@@ -3,8 +3,7 @@
 namespace pxgamer\WorldWideTorrents;
 
 /**
- * Class Mail
- * @package pxgamer\WorldWideTorrents
+ * Class Mail.
  */
 class Mail
 {
@@ -12,6 +11,7 @@ class Mail
 
     /**
      * Mail constructor.
+     *
      * @param Client|null $client
      */
     public function __construct(Client $client = null)
@@ -30,6 +30,7 @@ class Mail
 
     /**
      * @param null $userId
+     *
      * @return array|bool|mixed
      */
     public function getStats($userId = null)
@@ -38,6 +39,6 @@ class Mail
             return false;
         }
 
-        return $this->client->get('/mail/?id=' . $userId);
+        return $this->client->get('/mail/?id='.$userId);
     }
 }
