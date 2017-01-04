@@ -39,13 +39,14 @@ use \pxgamer\WorldWideTorrents;
 
 // Create a new Client instance
 $client = new WorldWideTorrents\Client();
-// $client->setAuthKey('API_KEY'); // This currently isn't applicable
+$client->setAuthKey('API_KEY');
 
 // Initialise a new instance of each class
 $group  = new WorldWideTorrents\Group($client);
 $mail  = new WorldWideTorrents\Mail($client);
 $torrent = new WorldWideTorrents\Torrent($client);
 $user = new WorldWideTorrents\User($client);
+$account = new WorldWideTorrents\Account($client);
 ```
 
 ## Methods
@@ -59,7 +60,7 @@ $user = new WorldWideTorrents\User($client);
  */
 use \pxgamer\WorldWideTorrents\Client;
 $client = new Client;
-// $client->setAuthKey('API_KEY');
+$client->setAuthKey('API_KEY');
 ```
 
 ### Group Class
@@ -112,4 +113,16 @@ $user->getInfo(656);
 ##### Getting a user's torrents
 ```php
 $user->getTorrents(656);
+```
+
+### Account Class
+##### Initialise the Account class
+```php
+// Requires the API key to be set in the Client class
+use \pxgamer\WorldWideTorrents\Account;
+$account = new Account($client);
+```
+##### Upload a torrent
+```php
+$account->upload('torrent_title', '@C:\torrents\t.torrent', 39);
 ```

@@ -132,7 +132,7 @@ class Client
     {
         return [
             'Content-Type: '.$this->jsonType,
-            'Authorization: '.$this->authKey,
+            'X-Authorization: '.$this->authKey,
         ];
     }
 

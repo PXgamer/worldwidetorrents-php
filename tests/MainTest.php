@@ -39,6 +39,13 @@ class MainTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf(WorldWideTorrents\User::class, $test);
     }
 
+    public function testAccountCanBeInitialised()
+    {
+        $client = new WorldWideTorrents\Client();
+        $test = new WorldWideTorrents\Account($client);
+        $this->assertInstanceOf(WorldWideTorrents\Account::class, $test);
+    }
+
     // Group Class Tests
     public function testGetGroupInfo()
     {
