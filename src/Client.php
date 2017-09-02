@@ -7,7 +7,7 @@ namespace pxgamer\WorldWideTorrents;
  */
 class Client
 {
-    const BASE_URL = 'https://worldwidetorrents.eu/api';
+    const BASE_URL = 'https://worldwidetorrents.me/api';
 
     public $authKey;
 
