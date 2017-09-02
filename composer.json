@@ -2,24 +2,7 @@
   "name": "pxgamer/worldwidetorrents-php",
   "type": "library",
   "description": "An easy to use wrapper for the WorldWideTorrents API written in PHP.",
-  "homepage": "https://github.com/PXgamer/worldwidetorrents-php",
   "license": "MIT",
-  "authors": [
-    {
-      "name": "PXgamer",
-      "email": "owzie123@gmail.com",
-      "role": "Developer"
-    }
-  ],
-  "support": {
-    "issues": "https://github.com/PXgamer/worldwidetorrents-php/issues"
-  },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/PXgamer/worldwidetorrents-php"
-    }
-  ],
   "require": {
     "php": ">=5.5.0",
     "ext-curl": "*"
