@@ -1,15 +1,15 @@
 {
-  "name": "pxgamer/worldwidetorrents-php",
-  "type": "library",
-  "description": "An easy to use wrapper for the WorldWideTorrents API written in PHP.",
-  "license": "MIT",
-  "require": {
-    "php": ">=5.5.0",
-    "ext-curl": "*"
-  },
-  "autoload": {
-    "psr-4": {
-      "pxgamer\\WorldWideTorrents\\": "src/"
+    "name": "pxgamer/worldwidetorrents-php",
+    "type": "library",
+    "description": "An easy to use wrapper for the WorldWideTorrents API written in PHP.",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.5.0",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "pxgamer\\WorldWideTorrents\\": "src/"
+        }
     }
-  }
 }
