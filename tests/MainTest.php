@@ -1,8 +1,9 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use pxgamer\WorldWideTorrents;
 
-class MainTest extends PHPUnit_Framework_TestCase
+class MainTest extends TestCase
 {
     // Initialisation Tests for the classes
     public function testCanBeInitialised()
