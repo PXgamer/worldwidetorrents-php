@@ -42,9 +42,9 @@ class Account
         }
 
         $content = [
-            'name' => $torrent_name,
+            'name'         => $torrent_name,
             'torrent_file' => $torrent_file,
-            'category_id' => $category_id,
+            'category_id'  => $category_id,
         ];
 
         return $this->client->post('/account/upload/', $content);

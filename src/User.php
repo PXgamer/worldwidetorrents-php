@@ -39,7 +39,7 @@ class User
             return false;
         }
 
-        return $this->client->get('/user/?id='.$userId);
+        return $this->client->get('/user/?id=' . $userId);
     }
 
     /**
@@ -53,6 +53,6 @@ class User
             return false;
         }
 
-        return $this->client->get('/user/torrents/?id='.$userId);
+        return $this->client->get('/user/torrents/?id=' . $userId);
     }
 }

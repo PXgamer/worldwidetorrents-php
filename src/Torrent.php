@@ -39,6 +39,6 @@ class Torrent
             return false;
         }
 
-        return $this->client->get('/torrent/?id='.$torrentId);
+        return $this->client->get('/torrent/?id=' . $torrentId);
     }
 }
