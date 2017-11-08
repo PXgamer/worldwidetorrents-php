@@ -1,65 +1,66 @@
 <?php
 
+namespace pxgamer\WorldWideTorrents;
+
 use PHPUnit\Framework\TestCase;
-use pxgamer\WorldWideTorrents;
 
 class MainTest extends TestCase
 {
     // Initialisation Tests for the classes
     public function testCanBeInitialised()
     {
-        $client = new WorldWideTorrents\Client();
-        $this->assertInstanceOf(WorldWideTorrents\Client::class, $client);
+        $client = new Client();
+        $this->assertInstanceOf(Client::class, $client);
     }
 
     public function testGroupCanBeInitialised()
     {
-        $client = new WorldWideTorrents\Client();
-        $test = new WorldWideTorrents\Group($client);
-        $this->assertInstanceOf(WorldWideTorrents\Group::class, $test);
+        $client = new Client();
+        $test = new Group($client);
+        $this->assertInstanceOf(Group::class, $test);
     }
 
     public function testMailCanBeInitialised()
     {
-        $client = new WorldWideTorrents\Client();
-        $test = new WorldWideTorrents\Mail($client);
-        $this->assertInstanceOf(WorldWideTorrents\Mail::class, $test);
+        $client = new Client();
+        $test = new Mail($client);
+        $this->assertInstanceOf(Mail::class, $test);
     }
 
     public function testTorrentCanBeInitialised()
     {
-        $client = new WorldWideTorrents\Client();
-        $test = new WorldWideTorrents\Torrent($client);
-        $this->assertInstanceOf(WorldWideTorrents\Torrent::class, $test);
+        $client = new Client();
+        $test = new Torrent($client);
+        $this->assertInstanceOf(Torrent::class, $test);
     }
 
     public function testUserCanBeInitialised()
     {
-        $client = new WorldWideTorrents\Client();
-        $test = new WorldWideTorrents\User($client);
-        $this->assertInstanceOf(WorldWideTorrents\User::class, $test);
+        $client = new Client();
+        $test = new User($client);
+        $this->assertInstanceOf(User::class, $test);
     }
 
     public function testAccountCanBeInitialised()
     {
-        $client = new WorldWideTorrents\Client();
-        $test = new WorldWideTorrents\Account($client);
-        $this->assertInstanceOf(WorldWideTorrents\Account::class, $test);
+        $client = new Client();
+        $test = new Account($client);
+        $this->assertInstanceOf(Account::class, $test);
     }
 
     // Group Class Tests
     public function testGetGroupInfo()
     {
-        $client = new WorldWideTorrents\Client();
-        $group = new WorldWideTorrents\Group($client);
+        $client = new Client();
+        $group = new Group($client);
         $result = $group->getInfo(3);
         $this->assertTrue(is_array($result));
     }
 
     public function testGetGroupTorrents()
     {
-        $client = new WorldWideTorrents\Client();
-        $group = new WorldWideTorrents\Group($client);
+        $client = new Client();
+        $group = new Group($client);
         $result = $group->getTorrents(3);
         $this->assertTrue(is_array($result));
     }
@@ -67,8 +68,8 @@ class MainTest extends TestCase
     // Mail Class Tests
     public function testGetMailStats()
     {
-        $client = new WorldWideTorrents\Client();
-        $mail = new WorldWideTorrents\Mail($client);
+        $client = new Client();
+        $mail = new Mail($client);
         $result = $mail->getStats(656);
         $this->assertTrue(is_array($result));
     }
@@ -76,8 +77,8 @@ class MainTest extends TestCase
     // Torrent Class Tests
     public function testGetTorrentInfo()
     {
-        $client = new WorldWideTorrents\Client();
-        $torrent = new WorldWideTorrents\Torrent($client);
+        $client = new Client();
+        $torrent = new Torrent($client);
         $result = $torrent->getInfo(656);
         $this->assertTrue(is_array($result));
     }
@@ -85,16 +86,16 @@ class MainTest extends TestCase
     // User Class Tests
     public function testGetUserInfo()
     {
-        $client = new WorldWideTorrents\Client();
-        $user = new WorldWideTorrents\User($client);
+        $client = new Client();
+        $user = new User($client);
         $result = $user->getInfo(656);
         $this->assertTrue(is_array($result));
     }
 
     public function testGetUserTorrents()
     {
-        $client = new WorldWideTorrents\Client();
-        $user = new WorldWideTorrents\User($client);
+        $client = new Client();
+        $user = new User($client);
         $result = $user->getTorrents(656);
         $this->assertTrue(is_array($result));
     }
