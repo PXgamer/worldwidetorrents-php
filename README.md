@@ -22,7 +22,7 @@ vendor/
 Via Composer
 
 ``` bash
-$ composer require pxgamer/:package_name
+$ composer require pxgamer/worldwidetorrents-php
 ```
 
 ## Usage
@@ -172,17 +172,17 @@ If you discover any security related issues, please email owzie123@gmail.com ins
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/pxgamer/:package_name.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/pxgamer/worldwidetorrents-php.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/pxgamer/:package_name/master.svg?style=flat-square
-[ico-styleci]: https://styleci.io/repos/:styleci/shield
-[ico-code-quality]: https://img.shields.io/codecov/c/github/pxgamer/:package_name.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/pxgamer/:package_name.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/pxgamer/worldwidetorrents-php/master.svg?style=flat-square
+[ico-styleci]: https://styleci.io/repos/77928261/shield
+[ico-code-quality]: https://img.shields.io/codecov/c/github/pxgamer/worldwidetorrents-php.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/pxgamer/worldwidetorrents-php.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/pxgamer/:package_name
-[link-travis]: https://travis-ci.org/pxgamer/:package_name
-[link-styleci]: https://styleci.io/repos/:styleci
-[link-code-quality]: https://codecov.io/gh/pxgamer/:package_name
-[link-downloads]: https://packagist.org/packages/pxgamer/:package_name
+[link-packagist]: https://packagist.org/packages/pxgamer/worldwidetorrents-php
+[link-travis]: https://travis-ci.org/pxgamer/worldwidetorrents-php
+[link-styleci]: https://styleci.io/repos/77928261
+[link-code-quality]: https://codecov.io/gh/pxgamer/worldwidetorrents-php
+[link-downloads]: https://packagist.org/packages/pxgamer/worldwidetorrents-php
 [link-author]: https://github.com/pxgamer
 [link-contributors]: ../../contributors
