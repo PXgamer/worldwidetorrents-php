@@ -9,8 +9,14 @@ class Client
 {
     const BASE_URL = 'https://worldwidetorrents.me/api';
 
+    /**
+     * @var string A WorldWideTorrents API key
+     */
     public $authKey;
 
+    /**
+     * @var string The mime type to request
+     */
     private $jsonType = 'application/json';
 
     /**
@@ -37,8 +43,8 @@ class Client
         curl_setopt_array(
             $cu,
             [
-                CURLOPT_URL => self::BASE_URL.$endpoint,
-                CURLOPT_HTTPHEADER => $this->curlHeaders(),
+                CURLOPT_URL            => self::BASE_URL . $endpoint,
+                CURLOPT_HTTPHEADER     => $this->curlHeaders(),
                 CURLOPT_RETURNTRANSFER => true,
             ]
         );
@@ -59,11 +65,11 @@ class Client
         curl_setopt_array(
             $cu,
             [
-                CURLOPT_URL => self::BASE_URL.$endpoint,
-                CURLOPT_HTTPHEADER => $this->curlHeaders(),
+                CURLOPT_URL            => self::BASE_URL . $endpoint,
+                CURLOPT_HTTPHEADER     => $this->curlHeaders(),
                 CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_POST => true,
-                CURLOPT_POSTFIELDS => json_encode($content),
+                CURLOPT_POST           => true,
+                CURLOPT_POSTFIELDS     => json_encode($content),
             ]
         );
 
@@ -83,12 +89,12 @@ class Client
         curl_setopt_array(
             $cu,
             [
-                CURLOPT_URL => self::BASE_URL.$endpoint,
-                CURLOPT_HTTPHEADER => $this->curlHeaders(),
+                CURLOPT_URL            => self::BASE_URL . $endpoint,
+                CURLOPT_HTTPHEADER     => $this->curlHeaders(),
                 CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_POST => true,
-                CURLOPT_POSTFIELDS => json_encode($content),
-                CURLOPT_CUSTOMREQUEST => 'PUT',
+                CURLOPT_POST           => true,
+                CURLOPT_POSTFIELDS     => json_encode($content),
+                CURLOPT_CUSTOMREQUEST  => 'PUT',
             ]
         );
 
@@ -107,10 +113,10 @@ class Client
         curl_setopt_array(
             $cu,
             [
-                CURLOPT_URL => self::BASE_URL.$endpoint,
-                CURLOPT_HTTPHEADER => $this->curlHeaders(),
+                CURLOPT_URL            => self::BASE_URL . $endpoint,
+                CURLOPT_HTTPHEADER     => $this->curlHeaders(),
                 CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_CUSTOMREQUEST => 'DELETE',
+                CURLOPT_CUSTOMREQUEST  => 'DELETE',
             ]
         );
 
@@ -123,8 +129,8 @@ class Client
     private function curlHeaders()
     {
         return [
-            'Content-Type: '.$this->jsonType,
-            'X-Authorization: '.$this->authKey,
+            'Content-Type: ' . $this->jsonType,
+            'X-Authorization: ' . $this->authKey,
         ];
     }
 

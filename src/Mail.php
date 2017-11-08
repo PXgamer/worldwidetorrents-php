@@ -39,6 +39,6 @@ class Mail
             return false;
         }
 
-        return $this->client->get('/mail/?id='.$userId);
+        return $this->client->get('/mail/?id=' . $userId);
     }
 }

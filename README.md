@@ -1,38 +1,35 @@
 # worldwidetorrents-php
 
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Software License][ico-license]](LICENSE.md)
+[![Build Status][ico-travis]][link-travis]
+[![Style CI][ico-styleci]][link-styleci]
+[![Code Coverage][ico-code-quality]][link-code-quality]
+[![Total Downloads][ico-downloads]][link-downloads]
+
 An easy to use wrapper for the WorldWideTorrents API written in PHP.
+
+## Structure
+
+```
+src/
+tests/
+vendor/
+```
+
+## Install
+
+Via Composer
+
+``` bash
+$ composer require pxgamer/worldwidetorrents-php
+```
 
 ## Usage
 
-__Include the class:__
-- Using Composer  
+```php
 
-`composer require pxgamer/worldwidetorrents-php`  
-```php
-<?php
-require 'vendor/autoload.php';
-```
-- Including the file manually  
-```php
-<?php
-include 'src/Client.php';
-```
-
-Once included, you can initialise the class using either of the following:
-
-```php
-$client = new \pxgamer\WorldWideTorrents\Client;
-```
-```php
-use \pxgamer\WorldWideTorrents\Client;
-$client = new Client;
-```
-
-## Getting started with Composer
-```php
-<?php
-// Include Composer
-require 'vendor/autoload.php';
+$client = new Client();
 
 // Use the specific classes as their short names
 use \pxgamer\WorldWideTorrents;
@@ -49,10 +46,10 @@ $user = new WorldWideTorrents\User($client);
 $account = new WorldWideTorrents\Account($client);
 ```
 
-## Methods
+### Methods
 
-### Client Class
-##### Initialise the Client class
+#### Client Class
+
 ```php
 /**
  * This is required to be initialised first.
@@ -64,65 +61,128 @@ $client->setAuthKey('API_KEY');
 ```
 
 ### Group Class
-##### Initialise the Group class
+
 ```php
 use \pxgamer\WorldWideTorrents\Group;
 $group = new Group($client);
 ```
-##### Getting a Group's information
+
+_Getting a Group's information_
+
 ```php
 $group->getInfo(3);
 ```
-##### Getting a Group's torrents
+
+_Getting a Group's torrents_
+
 ```php
 $group->getTorrents(3);
 ```
 
 ### Mail Class
-##### Initialise the Mail class
+
+_Initialise the Mail class_
 ```php
 use \pxgamer\WorldWideTorrents\Mail;
 $mail = new Mail($client);
 ```
-##### Getting a user's mail stats
+
+_Getting a user's mail stats_
+
 ```php
 $mail->getStats(656);
 ```
 
 ### Torrent Class
-##### Initialise the Torrent class
+
+_Initialise the Torrent class_
+
 ```php
 use \pxgamer\WorldWideTorrents\Torrent;
 $torrent = new Torrent($client);
 ```
-##### Getting a torrent's information
+
+_Getting a torrent's information_
+
 ```php
 $torrent->getInfo(656);
 ```
 
 ### User Class
-##### Initialise the User class
+
+_Initialise the User class_
+
 ```php
 use \pxgamer\WorldWideTorrents\User;
 $user = new User($client);
 ```
-##### Getting a user's information
+
+_Getting a user's information_
+
 ```php
 $user->getInfo(656);
 ```
-##### Getting a user's torrents
+
+_Getting a user's torrents_
+
 ```php
 $user->getTorrents(656);
 ```
 
 ### Account Class
-##### Initialise the Account class
+
+_Initialise the Account class_
+
 ```php
 // Requires the API key to be set in the Client class
 use \pxgamer\WorldWideTorrents\Account;
 $account = new Account($client);
 ```
-##### Upload a torrent
+
+_Upload a torrent_
+
 ```php
 $account->upload('torrent_title', '@C:\torrents\t.torrent', 39);
 ```
+
+## Change log
+
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
+## Testing
+
+``` bash
+$ composer test
+```
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) for details.
+
+## Security
+
+If you discover any security related issues, please email owzie123@gmail.com instead of using the issue tracker.
+
+## Credits
+
+- [pxgamer][link-author]
+- [All Contributors][link-contributors]
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+[ico-version]: https://img.shields.io/packagist/v/pxgamer/worldwidetorrents-php.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/pxgamer/worldwidetorrents-php/master.svg?style=flat-square
+[ico-styleci]: https://styleci.io/repos/77928261/shield
+[ico-code-quality]: https://img.shields.io/codecov/c/github/pxgamer/worldwidetorrents-php.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/pxgamer/worldwidetorrents-php.svg?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/pxgamer/worldwidetorrents-php
+[link-travis]: https://travis-ci.org/pxgamer/worldwidetorrents-php
+[link-styleci]: https://styleci.io/repos/77928261
+[link-code-quality]: https://codecov.io/gh/pxgamer/worldwidetorrents-php
+[link-downloads]: https://packagist.org/packages/pxgamer/worldwidetorrents-php
+[link-author]: https://github.com/pxgamer
+[link-contributors]: ../../contributors

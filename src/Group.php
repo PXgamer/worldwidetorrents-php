@@ -39,7 +39,7 @@ class Group
             return false;
         }
 
-        return $this->client->get('/group/info/?id='.$groupId);
+        return $this->client->get('/group/info/?id=' . $groupId);
     }
 
     /**
@@ -53,6 +53,6 @@ class Group
             return false;
         }
 
-        return $this->client->get('/group/torrents/?id='.$groupId);
+        return $this->client->get('/group/torrents/?id=' . $groupId);
     }
 }
