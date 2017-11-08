@@ -9,8 +9,14 @@ class Client
 {
     const BASE_URL = 'https://worldwidetorrents.me/api';
 
+    /**
+     * @var string A WorldWideTorrents API key
+     */
     public $authKey;
 
+    /**
+     * @var string The mime type to request
+     */
     private $jsonType = 'application/json';
 
     /**
